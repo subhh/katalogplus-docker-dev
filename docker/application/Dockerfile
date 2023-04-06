@@ -22,7 +22,7 @@ RUN a2dissite 000-default
 ENV VUFIND_HOME /opt/sites/vufind
 ENV VUFIND_LOCAL_DIR /opt/sites/vufind-site/local/docker
 ENV VUFIND_CACHE_DIR /tmp/vufind
-ENV VUFIND_ENV development
+# ENV VUFIND_ENV development
 
 RUN mkdir ${VUFIND_CACHE_DIR}
 RUN chown -R www-data:www-data ${VUFIND_CACHE_DIR}
