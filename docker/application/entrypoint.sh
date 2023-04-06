@@ -6,6 +6,9 @@ if [[ ! -d /opt/sites/vufind/logs ]]; then
     chmod 0777 /opt/sites/vufind/logs
 fi
 
+echo "Linking VuFind base application"
+ln -sf /opt/sites/vufind /opt/sites/katalogplus.sub.uni-hamburg.de
+
 echo "Enabling Apache configuration"
 if [[ ! -f /etc/apache2/sites-enabled/001-vufind.conf ]]; then
     ln -s /opt/sites/vufind-site/local/docker/config/httpd-vufind.conf /etc/apache2/sites-enabled/001-vufind.conf
